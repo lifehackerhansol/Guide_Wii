@@ -1,0 +1,569 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Restoring The Wii NAND to Stock - Wii Hacks Guide</title>
+<meta name="description" content="The complete guide to modding your Wii (and Wii mini)">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Wii Hacks Guide">
+<meta property="og:title" content="Restoring The Wii NAND to Stock">
+<meta property="og:url" content="https://wii.hacks.guide/it_IT/wii-factory-reset.html">
+
+
+  <meta property="og:description" content="The complete guide to modding your Wii (and Wii mini)">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://wii.hacks.guide/it_IT/wii-factory-reset.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://wii.hacks.guide/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Wii Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/site-config/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/site-config/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="icon" type="image/png" href="/images/site-config/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/site-config/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/site-config/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="manifest" href="/assets/js/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/site-config/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/site-config/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/site-config/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/assets/xml/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#28282b"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Questo sito web utilizza i cookie per visualizzare l'avanzamento corrente della guida sulla barra laterale e per migliorare il sito."
+  }
+})});
+</script>
+<!-- hacks-guide change end -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+<!-- hacks-guide change start: Disable caching -->
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
+          Wii Hacks Guide
+          
+        </a>
+      -->
+<!-- hacks-guide change end -->
+        <ul class="visible-links">
+<!-- hacks-guide change start: multi-language configuration -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/it_IT/">Menu Principale</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/per-iniziare">Per Iniziare</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/navigazione-sito">Navigazione del Sito</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/faq">FAQ</a></li>
+            
+          
+<!-- hacks-guide change end -->
+        </ul>
+        
+<!-- hacks-guide change start: Add language selector -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://wii.hacks.guide/wii-factory-reset.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://wii.hacks.guide/it_IT/wii-factory-reset.html">Italiano</a></li>
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang" type="button"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Progresso Complessivo</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/it_IT/'>Menu Principale</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/it_IT/per-iniziare'>Per Iniziare</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="letterbomb"><a href='/it_IT/letterbomb'>LetterBomb</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bluebomb"><a href='/it_IT/bluebomb'>BlueBomb</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashhax"><a href='/it_IT/flashhax'>FlashHax</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="str2hax"><a href='/it_IT/str2hax'>str2hax</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="wilbrand"><a href='/it_IT/wilbrand'>Wilbrand</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Opzioni Multiple)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="hbc"><a href='/it_IT/hbc'>Installazione dell'Homebrew Channel e di BootMii</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="hbc-mini"><a href='/it_IT/hbc-mini'>Homebrew Channel - solo per Wii mini</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bootmii"><a href='/it_IT/bootmii'>Backup BootMii</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="priiloader"><a href='/it_IT/priiloader'>Priiloader</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="osc"><a href='/it_IT/osc'>Open Shop Channel</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="cios-mini"><a href='/it_IT/cios-mini'>d2xl cIOS per Wii mini (sperimentale)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="wnd-mini"><a href='/it_IT/wnd-mini'>Wii mini NAND Dumper</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+<!-- hacks-guide change end -->
+
+</div>
+
+
+<!-- hacks-guide change end-->
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Restoring The Wii NAND to Stock">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Restoring The Wii NAND to Stock
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+<!-- hacks-guide change start -->
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Per supporto in Inglese, chiedere aiuto sul server <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew su Discord</a>.</b></div>
+        
+
+        <hr>
+<!-- hacks-guide change end -->
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Table of Contents</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#requisiti" id="markdown-toc-requisiti">Requisiti</a></li>
+  <li><a href="#istruzioni" id="markdown-toc-istruzioni">Istruzioni</a>    <ul>
+      <li><a href="#section-i---preparation" id="markdown-toc-section-i---preparation">Section I - Preparation</a></li>
+      <li><a href="#section-ii---creating-a-blank-nand" id="markdown-toc-section-ii---creating-a-blank-nand">Section II - Creating a Blank NAND</a></li>
+      <li><a href="#section-iii---verifying-the-nand" id="markdown-toc-section-iii---verifying-the-nand">Section III - Verifying the NAND</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>This guide details how to create a stock NAND for your Wii system using a program called Ohneschwanzenegger. Unlike the <code class="language-plaintext highlighter-rouge">Format Wii System Memory</code> option in the Wii settings, this will completely wipe any changes to the NAND by downloading a stock Wii System Menu from NUS servers. If followed correctly, the Wii should have no homebrew left on the system, stock IOSes, and boot up to a factory setup screen when the NAND is flashed.</p>
+
+<p>Please note that this program <strong>needs</strong> an existing (even bricked!) NAND backup to function, as it needs to have a copy of the first 8 blocks of NAND, a bad blocks list, and AES/HMAC keys.</p>
+
+<div class="notice--danger">
+<p>The instructions detailed in this guide WILL ERASE YOUR WII SYSTEM MEMORY and should only be considered as a LAST RESORT or if you are trying to do any of the following:</p>
+
+<ul>
+  <li>Restore the Wii to a state comparable to when it left the factory.</li>
+  <li>Fix a brick where you do not have a functional NAND backup or access to the Homebrew Channel but can still make one using BootMii.</li>
+  <li>You are unable to revert certain changes to the Wii System Memory such as all cIOS with DARKCORP.</li>
+</ul>
+
+</div>
+
+<p class="notice--warning">If you are trying to <a href="update">update your Wii to 4.3U</a> with homebrew or update outdated homebrew/IOS, you most likely do not need to follow this guide. Instead, you can use a tool like the SysCheck Updater Wizard built into <a href="modmii#syscheck-updater-wizard">ModMii</a>. If you are confused about this process, consider joining the Nintendo Homebrew discord server for support.</p>
+
+<h3 id="requisiti">Requisiti</h3>
+
+<ul>
+  <li>Una scheda SD con un spazio disponibile minimo di 512MB (1GB o più sono consigliati)</li>
+  <li>A <a href="bootmii">NAND backup</a> from the specific system you are trying to flash</li>
+  <li>A Windows computer with an Internet connection</li>
+  <li><a href="https://raw.githubusercontent.com/modmii/modmii.github.io/master/temp/ohneschwanzenegger.zip">Ohneschwanzenegger</a></li>
+  <li><a href="/assets/files/nandBinCheck.zip">Nand BIN Checker</a></li>
+</ul>
+
+<h3 id="istruzioni">Istruzioni</h3>
+
+<h4 id="section-i---preparation">Section I - Preparation</h4>
+
+<ol>
+  <li>
+    <p>Start Ohneschwanzenegger. You may get a Windows SmartScreen prompt, this is a false positive and you can run the program anyway by pressing <code class="language-plaintext highlighter-rouge">More info</code> and <code class="language-plaintext highlighter-rouge">Run anyway</code>.</p>
+  </li>
+  <li>
+    <p>Press the <code class="language-plaintext highlighter-rouge">Local Cache</code> button, create a new folder for the NUS cache to be output in, and then press OK. An example folder is given below.</p>
+
+    <p><img src="/images/factory-reset/nuscache.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Press <code class="language-plaintext highlighter-rouge">Nand Dump</code> on the toolbar, and then press <code class="language-plaintext highlighter-rouge">New nand</code>. This should open a pop-up window where you can adjust parameters for a new NAND dump. Press the large <code class="language-plaintext highlighter-rouge">Existing Nand...</code> button and find your existing NAND dump from your Wii.</p>
+
+    <p><img src="/images/factory-reset/newnand.png" alt="" /></p>
+  </li>
+  <li>
+    <p>This will fill in information such as the keys, Boot 1/2, and your bad blocks automatically. ONLY change the Destination box to <code class="language-plaintext highlighter-rouge">./blankNand.bin</code>, which will output the NAND to the program folder with the name <code class="language-plaintext highlighter-rouge">blankNand.bin</code>. Then, press OK.</p>
+
+    <p><img src="/images/factory-reset/renamenand.png" alt="" /></p>
+  </li>
+</ol>
+
+<h4 id="section-ii---creating-a-blank-nand">Section II - Creating a Blank NAND</h4>
+
+<ol>
+  <li>
+    <p>Now that the NAND is loaded into the program, select <code class="language-plaintext highlighter-rouge">Content</code> on the toolbar and then press Format. This will initialize your BLANK NAND, not your backup NAND.</p>
+
+    <p><img src="/images/factory-reset/formatnand.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Select the top left text box in the program and type in the Wii System Menu version that you need the NAND to have. Note that this should optimally be the version that your NAND was previously using. This NAND was using <code class="language-plaintext highlighter-rouge">4.3U</code>. Other valid examples are <code class="language-plaintext highlighter-rouge">3.2U</code>, <code class="language-plaintext highlighter-rouge">4.3E</code>, or <code class="language-plaintext highlighter-rouge">3.4J</code>.</p>
+
+    <p><img src="/images/factory-reset/sysmenu.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Once you have confirmed you have entered the version of the menu that you want, press enter or <code class="language-plaintext highlighter-rouge">Get It!</code>. This will begin downloading the menu from NUS servers, with the progress displayed in the program.</p>
+
+    <p><img src="/images/factory-reset/menudownload.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Once the menu has finished downloading, a pop-up will display showing the settings appended to the NAND. It will be autofilled depending on what was in your NAND, although the serial number may be incorrect. You can edit this if you would like, otherwise keep everything blank and press OK.</p>
+
+    <p><img src="/images/factory-reset/settings.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Next, press <code class="language-plaintext highlighter-rouge">Content</code> on the taskbar and press <code class="language-plaintext highlighter-rouge">Write meta entries</code>. Then, go back to the menu and press <code class="language-plaintext highlighter-rouge">Flush</code>. You may then close the window.</p>
+
+    <p><img src="/images/factory-reset/finalsteps.png" alt="" /></p>
+  </li>
+</ol>
+
+<h4 id="section-iii---verifying-the-nand">Section III - Verifying the NAND</h4>
+
+<ol>
+  <li>
+    <p>If NAND Bin Checker is not already in the same directory as Ohneschwanzenegger, copy it there now. Then, open a terminal in that directory. Run the following command: <code class="language-plaintext highlighter-rouge">.\nandBinCheck.exe .\blankNand.bin</code>. If you named the NAND something else, adjust the command accordingly. The program will then check the validity of the NAND.</p>
+
+    <p><img src="/images/factory-reset/nandcheck.png" alt="" /></p>
+  </li>
+  <li>
+    <p>If all is well, the result should look similar to the below. If there are ANY errors that stand out, DO NOT use this NAND and try again as it may damage or permanantly brick your Wii. If you continue to get these errors on further attempts, go to the Nintendo Homebrew discord server for support.</p>
+
+    <p><img src="/images/factory-reset/nandcheckresult.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Move the <code class="language-plaintext highlighter-rouge">blankNand.bin</code> to your Wii SD card and rename it to <code class="language-plaintext highlighter-rouge">nand.bin</code> so that it can be flashed by BootMii. Remember not to overwrite your existing NAND!</p>
+
+    <p><img src="/images/factory-reset/nandname.png" alt="" /></p>
+  </li>
+</ol>
+
+<p class="notice--info"><a href="bootmiirecover">Continue to BootMii Recovery</a>
+Now that you have a blank NAND, you can restore it on your Wii using BootMii.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_Wii" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+<!-- hacks-guide change start: force disable atom feed-->
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+<!-- hacks-guide change end -->
+
+</div>
+
+<!-- hacks-guide change start: custom footer -->
+
+
+
+<div class="page__footer-copyright">&copy; 2024 Nintendo Homebrew. - <a href="navigazione-sito">Navigazione del Sito</a> - <a href="privacy-policy">Informativa sulla Privacy</a> - <a href="donations">Donazioni</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
+
+      </footer>
+    </div>
+<!-- hacks-guide change end -->
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- hacks-guide change start: Disable caching -->
+
+<!-- hacks-guide change end -->
+
+
+
+
+
+
+
+  </body>
+</html>
